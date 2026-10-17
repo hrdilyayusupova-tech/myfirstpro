@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Дилором Юсупова — HR-специалист</title>
+  <meta name="description" content="Дилором Юсупова Тохиржоновна — HR-генералист с 3-летним опытом: подбор, адаптация, кадровое администрирование, оценка и развитие персонала.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fbf8fb;
+      --surface: #ffffff;
+      --text: #2a2433;
+      --muted: #6b6475;
+      --accent: #d0457f;
+      --accent-soft: #fbe6ef;
+      --blue: #6f9ae0;
+      --blue-soft: #e8f0fc;
+      --line: #ece4ec;
+      --shadow: 0 20px 50px -25px rgba(120, 60, 100, .35);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #17141b;
+        --surface: #211d27;
+        --text: #f1ecf3;
+        --muted: #aaa1b2;
+        --accent: #f07aaa;
+        --accent-soft: #3a2230;
+        --blue: #93b6ee;
+        --blue-soft: #1f2a3c;
+        --line: #322c39;
+        --shadow: 0 20px 50px -25px rgba(0, 0, 0, .6);
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Manrope", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+    /* Hero */
+    .hero {
+      background:
+        radial-gradient(circle at 85% 10%, var(--accent-soft), transparent 55%),
+        radial-gradient(circle at 10% 90%, var(--blue-soft), transparent 55%);
+      padding: 72px 0 64px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(34px, 5.5vw, 54px);
+      line-height: 1.1;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .patronymic {
+      font-family: "Playfair Display", Georgia, serif;
+      font-style: italic;
+      font-size: clamp(20px, 3vw, 26px);
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .lead { font-size: 18px; color: var(--muted); max-width: 520px; margin-bottom: 32px; }
+    .lead strong { color: var(--text); }
+    .btns { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--accent); color: #fff; box-shadow: var(--shadow); }
+    .btn-ghost { border: 1.5px solid var(--line); background: var(--surface); }
+    .photo {
+      position: relative;
+      justify-self: center;
+      width: 100%;
+      max-width: 360px;
+    }
+    .photo::before {
+      content: "";
+      position: absolute; inset: 18px -18px -18px 18px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, var(--blue), var(--accent));
+      opacity: .35;
+    }
+    .photo img {
+      position: relative;
+      display: block;
+      width: 100%;
+      aspect-ratio: 6 / 7;
+      object-fit: cover;
+      object-position: 50% 20%;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    /* Stats */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: -32px;
+      position: relative;
+    }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px 24px;
+      box-shadow: var(--shadow);
+    }
+    .stat b { display: block; font-size: 28px; color: var(--accent); line-height: 1.2; }
+    .stat span { font-size: 14px; color: var(--muted); }
+
+    /* Sections */
+    section { padding: 72px 0 0; }
+    h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(28px, 4vw, 38px);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .sub { color: var(--muted); max-width: 640px; margin-bottom: 36px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 26px;
+    }
+    .icon {
+      width: 46px; height: 46px;
+      display: grid; place-items: center;
+      border-radius: 14px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      margin-bottom: 16px;
+    }
+    .card:nth-child(even) .icon { background: var(--accent-soft); color: var(--accent); }
+    .card h3 { font-size: 18px; margin-bottom: 8px; }
+    .card p { color: var(--muted); font-size: 15px; }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 30px;
+    }
+    .panel h3 { font-size: 20px; margin-bottom: 16px; }
+    .panel ul { list-style: none; display: grid; gap: 12px; }
+    .panel li { position: relative; padding-left: 28px; color: var(--muted); }
+    .panel li::before {
+      content: "";
+      position: absolute; left: 0; top: 8px;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: .75;
+    }
+    .panel.for-people li::before { background: var(--blue); }
+
+    /* Contacts */
+    .contact {
+      margin: 72px 0;
+      background: linear-gradient(135deg, var(--accent-soft), var(--blue-soft));
+      border-radius: 28px;
+      padding: 48px 32px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .avatar {
+      width: 140px; height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .contact h2 { margin-bottom: 6px; }
+    .contact p { color: var(--muted); margin-bottom: 22px; }
+    .contact-list { display: flex; flex-wrap: wrap; gap: 12px; }
+    .contact-item {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--surface);
+      border-radius: 14px;
+      padding: 12px 18px;
+      text-decoration: none;
+      font-weight: 600;
+      word-break: break-all;
+    }
+    .contact-item svg { flex: none; color: var(--accent); }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      padding: 0 0 40px;
+    }
+
+    @media (max-width: 760px) {
+      .hero { padding: 48px 0 56px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .photo { order: -1; max-width: 300px; }
+      .stats { grid-template-columns: 1fr; }
+      .split { grid-template-columns: 1fr; }
+      .contact { grid-template-columns: 1fr; text-align: center; padding: 36px 20px; }
+      .avatar { margin: 0 auto; }
+      .contact-list { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag">HR-генералист · 3 года опыта</span>
+        <h1>Дилором Юсупова</h1>
+        <p class="patronymic">Тохиржоновна</p>
+        <p class="lead">
+          Помогаю компаниям находить <strong>своих людей</strong>, а людям —
+          <strong>свою работу</strong>. Выстраиваю HR-процессы так, чтобы
+          сотрудникам было понятно, спокойно и комфортно расти.
+        </p>
+        <div class="btns">
+          <a class="btn btn-primary" href="#contact">Связаться со мной</a>
+          <a class="btn btn-ghost" href="#services">Чем я помогу</a>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="img/dilorom.jpg" alt="Дилором Юсупова">
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>3 года</b><span>практики в HR</span></div>
+      <div class="stat"><b>Полный цикл</b><span>от вакансии до адаптации и развития</span></div>
+      <div class="stat"><b>2 стороны</b><span>помогаю и компаниям, и соискателям</span></div>
+    </div>
+
+    <section id="services">
+      <h2>Чем я могу помочь</h2>
+      <p class="sub">Как HR-генералист я веду весь путь сотрудника в компании — от первого объявления о вакансии до развития в команде.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <h3>Подбор персонала</h3>
+          <p>Составлю профиль должности и текст вакансии, найду и отберу кандидатов, проведу собеседования и помогу сделать выбор.</p>
+        </article>
+        <article class="card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"/></svg>
+          </div>
+          <h3>Адаптация новичков</h3>
+          <p>Подготовлю план первых дней и месяцев, назначу наставника, сопровожу испытательный срок — чтобы человек быстрее влился и остался.</p>
+        </article>
+        <article class="card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>
+          </div>
+          <h3>Кадровое делопроизводство</h3>
+          <p>Приём, перевод, отпуска, увольнение — оформлю документы аккуратно и вовремя, наведу порядок в личных делах.</p>
+        </article>
+        <article class="card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg>
+          </div>
+          <h3>Оценка и развитие</h3>
+          <p>Помогу внедрить регулярную оценку, обратную связь и планы развития, подобрать обучение под задачи сотрудников.</p>
+        </article>
+        <article class="card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          </div>
+          <h3>Вовлечённость и культура</h3>
+          <p>Проведу опросы, разберу причины текучести, организую корпоративные события и помогу удерживать ценных людей.</p>
+        </article>
+        <article class="card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>HR-консультации</h3>
+          <p>Отвечу на вопросы по трудовым отношениям, помогу разобраться в сложной ситуации с сотрудником и выстроить HR-процессы с нуля.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Кому я полезна</h2>
+      <p class="sub">Работаю и с бизнесом, и с людьми, которые ищут работу или хотят сделать следующий шаг в карьере.</p>
+      <div class="split">
+        <div class="panel">
+          <h3>Компаниям и руководителям</h3>
+          <ul>
+            <li>Закрыть вакансию подходящим человеком</li>
+            <li>Навести порядок в кадровых документах</li>
+            <li>Снизить текучесть и выстроить адаптацию</li>
+            <li>Запустить HR-функцию в небольшой компании</li>
+          </ul>
+        </div>
+        <div class="panel for-people">
+          <h3>Соискателям и сотрудникам</h3>
+          <ul>
+            <li>Составить сильное резюме и сопроводительное письмо</li>
+            <li>Подготовиться к собеседованию глазами HR</li>
+            <li>Понять, куда расти и как говорить о повышении</li>
+            <li>Получить честную обратную связь о своих шансах</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="contact" id="contact">
+      <img class="avatar" src="img/dilorom-face.jpg" alt="Дилором Юсупова">
+      <div>
+        <h2>Давайте поговорим</h2>
+        <p>Напишите или позвоните — обсудим вашу задачу и найдём решение.</p>
+        <div class="contact-list">
+          <!-- TODO: заменить на реальный номер телефона в обоих местах -->
+          <a class="contact-item" href="tel:+998000000000">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            +998 00 000 00 00
+          </a>
+          <a class="contact-item" href="mailto:hrdilyayusupova@gmail.com">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            hrdilyayusupova@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>© 2026 Дилором Юсупова · HR-генералист</footer>
+
+</body>
+</html>
